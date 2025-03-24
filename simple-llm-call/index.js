@@ -1,5 +1,5 @@
 import { ChatOpenAI } from "@langchain/openai";
-import { StateGraph, Annotation, START, END, Graph } from "@langchain/langgraph";
+import { START, END, Graph } from "@langchain/langgraph";
 import { HumanMessage } from "@langchain/core/messages";
 import dotenv from "dotenv";
 
@@ -9,7 +9,7 @@ dotenv.config();
 const llm = new ChatOpenAI({
     openAIApiKey: process.env.OPENAI_API_KEY,
     model: "gpt-4o",
-    temperature: 0.7,
+    temperature: 0.8,
 });
 
 // LLM call function
@@ -19,15 +19,14 @@ const callLLM = async (message) => {
     // Call the model with the message
     const response = await llm.invoke([new HumanMessage(message)]);
 
-    // Return updated state
     return response;
 };
 
 // Create the workflow graph
 const workflow = new Graph()
     .addNode("llmNode", callLLM)
-    .addEdge("__start__", "llmNode")
-    .addEdge("llmNode", "__end__");
+    .addEdge(START, "llmNode")
+    .addEdge("llmNode", END);
 
 // Compile the runnable workflow
 const runnable = workflow.compile();
@@ -39,7 +38,7 @@ async function main() {
         return;
     }
 
-    const input = "Tell me a short joke about programming";
+    const input = process.argv[2] || "Tell me a short joke about programming";
 
     console.log(`User input: "${input}"`);
 
