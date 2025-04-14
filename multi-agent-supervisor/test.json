@@ -1,0 +1,446 @@
+{
+    "messages": [
+        {
+            "lc": 1,
+            "type": "constructor",
+            "id": [
+                "langchain_core",
+                "messages",
+                "HumanMessage"
+            ],
+            "kwargs": {
+                "content": "what's the combined headcount of the FAANG companies in 2024??",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "id": "45568a01-716e-4180-b46b-4cf9fc81506a"
+            }
+        },
+        {
+            "lc": 1,
+            "type": "constructor",
+            "id": [
+                "langchain_core",
+                "messages",
+                "AIMessage"
+            ],
+            "kwargs": {
+                "content": "",
+                "name": "supervisor",
+                "additional_kwargs": {
+                    "tool_calls": [
+                        {
+                            "id": "call_94qMDguI72MR1CrG6jTyS46c",
+                            "type": "function",
+                            "function": {
+                                "name": "transfer_to_research_expert",
+                                "arguments": "{}"
+                            }
+                        }
+                    ]
+                },
+                "response_metadata": {
+                    "tokenUsage": {
+                        "promptTokens": 104,
+                        "completionTokens": 15,
+                        "totalTokens": 119
+                    },
+                    "finish_reason": "tool_calls",
+                    "model_name": "gpt-4o-2024-08-06",
+                    "usage": {
+                        "prompt_tokens": 104,
+                        "completion_tokens": 15,
+                        "total_tokens": 119,
+                        "prompt_tokens_details": {
+                            "cached_tokens": 0,
+                            "audio_tokens": 0
+                        },
+                        "completion_tokens_details": {
+                            "reasoning_tokens": 0,
+                            "audio_tokens": 0,
+                            "accepted_prediction_tokens": 0,
+                            "rejected_prediction_tokens": 0
+                        }
+                    },
+                    "system_fingerprint": "fp_b7faba9ef5"
+                },
+                "id": "chatcmpl-BL2YzhuAdbvVgWqUTRRuAeDhv4N1g",
+                "tool_calls": [
+                    {
+                        "name": "transfer_to_research_expert",
+                        "args": {},
+                        "type": "tool_call",
+                        "id": "call_94qMDguI72MR1CrG6jTyS46c"
+                    }
+                ],
+                "invalid_tool_calls": [],
+                "usage_metadata": {
+                    "output_tokens": 15,
+                    "input_tokens": 104,
+                    "total_tokens": 119,
+                    "input_token_details": {
+                        "audio": 0,
+                        "cache_read": 0
+                    },
+                    "output_token_details": {
+                        "audio": 0,
+                        "reasoning": 0
+                    }
+                }
+            }
+        },
+        {
+            "lc": 1,
+            "type": "constructor",
+            "id": [
+                "langchain_core",
+                "messages",
+                "ToolMessage"
+            ],
+            "kwargs": {
+                "content": "Successfully transferred to research_expert",
+                "name": "transfer_to_research_expert",
+                "tool_call_id": "call_94qMDguI72MR1CrG6jTyS46c",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "id": "73d921e1-cf5c-498e-92f8-424c8308a262"
+            }
+        },
+        {
+            "lc": 1,
+            "type": "constructor",
+            "id": [
+                "langchain_core",
+                "messages",
+                "AIMessage"
+            ],
+            "kwargs": {
+                "content": "Here are the estimated headcounts for each of the FAANG companies in 2024:\n\n1. **Facebook (Meta)**: 67,317 employees.\n2. **Apple**: 164,000 employees.\n3. **Amazon**: 1,551,000 employees.\n4. **Netflix**: 14,000 employees.\n5. **Google (Alphabet)**: 181,269 employees.\n\nIf you need the combined headcount, you would need to add these figures together.",
+                "name": "research_expert",
+                "additional_kwargs": {},
+                "response_metadata": {
+                    "tokenUsage": {
+                        "promptTokens": 683,
+                        "completionTokens": 103,
+                        "totalTokens": 786
+                    },
+                    "finish_reason": "stop",
+                    "model_name": "gpt-4o-2024-08-06",
+                    "usage": {
+                        "prompt_tokens": 683,
+                        "completion_tokens": 103,
+                        "total_tokens": 786,
+                        "prompt_tokens_details": {
+                            "cached_tokens": 0,
+                            "audio_tokens": 0
+                        },
+                        "completion_tokens_details": {
+                            "reasoning_tokens": 0,
+                            "audio_tokens": 0,
+                            "accepted_prediction_tokens": 0,
+                            "rejected_prediction_tokens": 0
+                        }
+                    },
+                    "system_fingerprint": "fp_92f14e8683"
+                },
+                "id": "chatcmpl-BL2Z3QkWzmgumgSqp7NXdZthCeThh",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": {
+                    "output_tokens": 103,
+                    "input_tokens": 683,
+                    "total_tokens": 786,
+                    "input_token_details": {
+                        "audio": 0,
+                        "cache_read": 0
+                    },
+                    "output_token_details": {
+                        "audio": 0,
+                        "reasoning": 0
+                    }
+                }
+            }
+        },
+        {
+            "lc": 1,
+            "type": "constructor",
+            "id": [
+                "langchain_core",
+                "messages",
+                "AIMessage"
+            ],
+            "kwargs": {
+                "content": "Transferring back to supervisor",
+                "tool_calls": [
+                    {
+                        "name": "transfer_back_to_supervisor",
+                        "args": {},
+                        "id": "d3dcfd0c-7327-46e4-b657-2857d2148ac3"
+                    }
+                ],
+                "name": "research_expert",
+                "invalid_tool_calls": [],
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "id": "2b20a100-399b-4657-93dd-2d740a7bc69b"
+            }
+        },
+        {
+            "lc": 1,
+            "type": "constructor",
+            "id": [
+                "langchain_core",
+                "messages",
+                "ToolMessage"
+            ],
+            "kwargs": {
+                "content": "Successfully transferred back to supervisor",
+                "name": "transfer_back_to_supervisor",
+                "tool_call_id": "d3dcfd0c-7327-46e4-b657-2857d2148ac3",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "id": "6ebb4f1c-7a5a-4dda-8ca6-428b54b17c8f"
+            }
+        },
+        {
+            "lc": 1,
+            "type": "constructor",
+            "id": [
+                "langchain_core",
+                "messages",
+                "AIMessage"
+            ],
+            "kwargs": {
+                "content": "",
+                "name": "supervisor",
+                "additional_kwargs": {
+                    "tool_calls": [
+                        {
+                            "id": "call_Y5ive1paEq6SHhR2scFPGzau",
+                            "type": "function",
+                            "function": {
+                                "name": "transfer_to_math_expert",
+                                "arguments": "{}"
+                            }
+                        }
+                    ]
+                },
+                "response_metadata": {
+                    "tokenUsage": {
+                        "promptTokens": 281,
+                        "completionTokens": 14,
+                        "totalTokens": 295
+                    },
+                    "finish_reason": "tool_calls",
+                    "model_name": "gpt-4o-2024-08-06",
+                    "usage": {
+                        "prompt_tokens": 281,
+                        "completion_tokens": 14,
+                        "total_tokens": 295,
+                        "prompt_tokens_details": {
+                            "cached_tokens": 0,
+                            "audio_tokens": 0
+                        },
+                        "completion_tokens_details": {
+                            "reasoning_tokens": 0,
+                            "audio_tokens": 0,
+                            "accepted_prediction_tokens": 0,
+                            "rejected_prediction_tokens": 0
+                        }
+                    },
+                    "system_fingerprint": "fp_b7faba9ef5"
+                },
+                "id": "chatcmpl-BL2Z5zZ5bIob2sqUa3SOGXn81IJ7E",
+                "tool_calls": [
+                    {
+                        "name": "transfer_to_math_expert",
+                        "args": {},
+                        "type": "tool_call",
+                        "id": "call_Y5ive1paEq6SHhR2scFPGzau"
+                    }
+                ],
+                "invalid_tool_calls": [],
+                "usage_metadata": {
+                    "output_tokens": 14,
+                    "input_tokens": 281,
+                    "total_tokens": 295,
+                    "input_token_details": {
+                        "audio": 0,
+                        "cache_read": 0
+                    },
+                    "output_token_details": {
+                        "audio": 0,
+                        "reasoning": 0
+                    }
+                }
+            }
+        },
+        {
+            "lc": 1,
+            "type": "constructor",
+            "id": [
+                "langchain_core",
+                "messages",
+                "ToolMessage"
+            ],
+            "kwargs": {
+                "content": "Successfully transferred to math_expert",
+                "name": "transfer_to_math_expert",
+                "tool_call_id": "call_Y5ive1paEq6SHhR2scFPGzau",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "id": "b1d3e506-67ae-4fb9-a035-8cd0584af65d"
+            }
+        },
+        {
+            "lc": 1,
+            "type": "constructor",
+            "id": [
+                "langchain_core",
+                "messages",
+                "AIMessage"
+            ],
+            "kwargs": {
+                "content": "The combined headcount of the FAANG companies in 2024 is estimated to be 1,977,586 employees.",
+                "name": "math_expert",
+                "additional_kwargs": {},
+                "response_metadata": {
+                    "tokenUsage": {
+                        "promptTokens": 516,
+                        "completionTokens": 27,
+                        "totalTokens": 543
+                    },
+                    "finish_reason": "stop",
+                    "model_name": "gpt-4o-2024-08-06",
+                    "usage": {
+                        "prompt_tokens": 516,
+                        "completion_tokens": 27,
+                        "total_tokens": 543,
+                        "prompt_tokens_details": {
+                            "cached_tokens": 0,
+                            "audio_tokens": 0
+                        },
+                        "completion_tokens_details": {
+                            "reasoning_tokens": 0,
+                            "audio_tokens": 0,
+                            "accepted_prediction_tokens": 0,
+                            "rejected_prediction_tokens": 0
+                        }
+                    },
+                    "system_fingerprint": "fp_92f14e8683"
+                },
+                "id": "chatcmpl-BL2ZCyuj5pZ0V1p22WFguXwcsrbNA",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": {
+                    "output_tokens": 27,
+                    "input_tokens": 516,
+                    "total_tokens": 543,
+                    "input_token_details": {
+                        "audio": 0,
+                        "cache_read": 0
+                    },
+                    "output_token_details": {
+                        "audio": 0,
+                        "reasoning": 0
+                    }
+                }
+            }
+        },
+        {
+            "lc": 1,
+            "type": "constructor",
+            "id": [
+                "langchain_core",
+                "messages",
+                "AIMessage"
+            ],
+            "kwargs": {
+                "content": "Transferring back to supervisor",
+                "tool_calls": [
+                    {
+                        "name": "transfer_back_to_supervisor",
+                        "args": {},
+                        "id": "deaf63e0-3750-492b-ba39-bf53a2e16f4f"
+                    }
+                ],
+                "name": "math_expert",
+                "invalid_tool_calls": [],
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "id": "042c29c8-3b20-4a22-8dcc-3a915d6155d0"
+            }
+        },
+        {
+            "lc": 1,
+            "type": "constructor",
+            "id": [
+                "langchain_core",
+                "messages",
+                "ToolMessage"
+            ],
+            "kwargs": {
+                "content": "Successfully transferred back to supervisor",
+                "name": "transfer_back_to_supervisor",
+                "tool_call_id": "deaf63e0-3750-492b-ba39-bf53a2e16f4f",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "id": "e9792a41-284d-4eb1-bc57-d5dbc17c76a2"
+            }
+        },
+        {
+            "lc": 1,
+            "type": "constructor",
+            "id": [
+                "langchain_core",
+                "messages",
+                "AIMessage"
+            ],
+            "kwargs": {
+                "content": "The combined headcount of the FAANG companies in 2024 is estimated to be 1,977,586 employees.",
+                "name": "supervisor",
+                "additional_kwargs": {},
+                "response_metadata": {
+                    "tokenUsage": {
+                        "promptTokens": 380,
+                        "completionTokens": 27,
+                        "totalTokens": 407
+                    },
+                    "finish_reason": "stop",
+                    "model_name": "gpt-4o-2024-08-06",
+                    "usage": {
+                        "prompt_tokens": 380,
+                        "completion_tokens": 27,
+                        "total_tokens": 407,
+                        "prompt_tokens_details": {
+                            "cached_tokens": 0,
+                            "audio_tokens": 0
+                        },
+                        "completion_tokens_details": {
+                            "reasoning_tokens": 0,
+                            "audio_tokens": 0,
+                            "accepted_prediction_tokens": 0,
+                            "rejected_prediction_tokens": 0
+                        }
+                    },
+                    "system_fingerprint": "fp_b7faba9ef5"
+                },
+                "id": "chatcmpl-BL2ZDUML5jIVcd3rc7WXTItBBOind",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": {
+                    "output_tokens": 27,
+                    "input_tokens": 380,
+                    "total_tokens": 407,
+                    "input_token_details": {
+                        "audio": 0,
+                        "cache_read": 0
+                    },
+                    "output_token_details": {
+                        "audio": 0,
+                        "reasoning": 0
+                    }
+                }
+            }
+        }
+    ]
+}
